@@ -20,4 +20,21 @@ class simulatedData {
     this.gpa = Double.parseDouble(rand.nextInt(5)+"."+rand.nextInt(10));
     this.ID = Integer.parseInt("900" + rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10));
   }
+
+  public int getID(){
+    return this.ID;
+  }
+
+  public Double getGPA(){
+    return this.gpa;
+  }
+
+  public String getName(){
+    return this.name;
+  }
+
+  public String toCSVstring() {
+    return String.format("%d,%s,%f,",
+            ID, name, gpa);
+}
 }
