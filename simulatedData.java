@@ -17,7 +17,11 @@ class simulatedData {
 
   public simulatedData(){
     this.name = NAMES[rand.nextInt(NAMES.length)];
-    this.gpa = Double.parseDouble(rand.nextInt(5)+"."+rand.nextInt(10));
+    Double gpa = Double.parseDouble(rand.nextInt(5)+"."+rand.nextInt(10));
+    while(gpa>4.0){
+      gpa = Double.parseDouble(rand.nextInt(5)+"."+rand.nextInt(10));
+    }
+    this.gpa = gpa;
     this.ID = Integer.parseInt("900" + rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10)+rand.nextInt(10));
   }
 
